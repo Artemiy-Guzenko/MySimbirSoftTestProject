@@ -49,9 +49,7 @@ public class UrlServiceImpl implements UrlService {
             //запись в бд
 
             for (Map.Entry entry : uniqueWords.entrySet()) {
-                System.out.println("sd");
                 Url urlToBePersist = new Url(url.getPath(), (String) entry.getKey(), (Integer) entry.getValue());
-                System.out.printf("sd");
                 urlDao.addWords(urlToBePersist);
             }
 
